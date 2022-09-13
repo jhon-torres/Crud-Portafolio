@@ -77,8 +77,10 @@ contactForm.addEventListener('submit', (e) => {
             if (editStatus){
                 updateContact(id, {nombre: name.value, email: email.value, phone: phone.value, message: message.value});
                 editStatus = false;
+                contactForm['contact-save'].innerText = 'Enviar';
             } else {
                 saveContact(name.value, email.value, phone.value, message.value)
+                contactForm['contact-save'].innerText = 'Enviar';
             }
         }
 
